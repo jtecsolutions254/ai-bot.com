@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UOEM Students Copilot Chatbot for answering queries related to the University of Eastern Management.">
+    <title>UOEM Assistant Chatbot</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking your CSS file -->
+</head>
+<body>
+
+    <!-- Sign-Up Section -->
+    <div class="form-container" id="signup-container" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="signup-username" placeholder="Enter your Username..." required>
+            <input type="email" id="signup-email" placeholder="Enter your email..." required>
+            <input type="password" id="signup-password" placeholder="Input your Password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Log in here</a></p>
+    </div>
+
+    <!-- Login Section -->
+    <div class="form-container" id="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="text" id="login-username" placeholder="Enter Username..." required>
+            <input type="password" id="login-password" placeholder="Input Password..." required><br>
+            <button type="submit">Log In</button>
+        </form>
+        <p>Forgot your password? <a href="#" onclick="showForgotPassword()">Reset it here</a></p>
+        <p>Don't have an account? 
+            <a href="#" onclick="showSignup()">Sign up here</a></p>
+    </div>
+
+    <!-- Forgot Password Section -->
+    <div class="form-container" id="forgot-password-container" style="display: none;">
+        <h2>Reset Password</h2>
+        <form id="forgot-password-form">
+            <input type="email" id="forgot-email" placeholder="Enter your email" required>
+            <button type="submit">Send Reset Link</button>
+        </form>
+        <p>Remembered your password? <a href="#" onclick="showLogin()">Log in here</a></p>
+    </div>
+
+    <!-- Chatbot Section -->
+    <div class="chat-container" id="chat-container" style="display: none;">
+        <div class="chat-header">
+            <h3>Welcome to UOEM Assistant Chatbot</h3>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container" style="display: block;;">
+            <input type="text" id="chat-input" placeholder="Ask anything concerning the school here..."/>
+            <button id="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script> <!-- Your JavaScript file -->
+</body>
+</html>
